@@ -1,4 +1,4 @@
-
+---@type WidgetScript
 local _c1 = "DBK_Tx15Pro"
 local _f1 = "v1.0"
 local _e1 = 10
@@ -855,7 +855,8 @@ local function refresh(_c9, event, touchState)
     local _t2 = model.getInfo().name
     if _l2 ~= _t2 then
         _l2 = _t2
-        _m2 = "/WIDGETS/DBK_Tx15Pro/"..string.sub(_l2, 2)..".png"
+        -- _m2 = "/WIDGETS/DBK_Tx15Pro/"..string.sub(_l2, 2)..".png"
+        _m2 = "/IMAGES/"..model.getInfo().bitmap
         
         if _t2 and _t2 ~= "" then
             
@@ -1327,10 +1328,11 @@ local function refresh(_c9, event, touchState)
    
 end
 return {
-    name = _c1,
+    name = "DBKTx15",
     options = _x5,
     create = create,
     update = update,
     refresh = refresh,
     background = background
 }
+
